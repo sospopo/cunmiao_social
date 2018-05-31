@@ -7,12 +7,15 @@ import jQuery from 'jquery'
 import '../src/lib/js/jQuery.md5'
 import {baseUrl} from './config/env.js'
 
-import 'jquery/dist/jquery.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
+import 'summernote'
+import 'summernote/dist/lang/summernote-zh-CN'
+import 'summernote/dist/summernote.css'
 import 'font-awesome/css/font-awesome.min.css'
 import '!style-loader!css-loader!less-loader!./assets/css/common.less'
+import '!style-loader!css-loader!less-loader!./lib/css/global.css'
 import 'element-ui/lib/theme-chalk/index.css'
 import ElementUI from 'element-ui'
 
