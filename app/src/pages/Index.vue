@@ -1,11 +1,6 @@
 <template>
   <div class="dvContent">
     <div class="col-md-8">
-      <div class="content-title">
-        <img class="pull-left" src="../assets/images/bean.jpg">
-        <span class="qsTitle">帖子</span>
-        <!--<span class="back"><a href="">《《返回上一页</a></span>-->
-      </div>
       <div class="content-tab">
         <div class="tab-head tab-current">全部帖子</div>
         <div class="tab-head">我的帖子</div>
@@ -116,6 +111,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="content-title">
+        <!--<span class="back"><a href="">《《返回上一页</a></span>-->
       </div>
     </div>
     <div class="col-md-4">

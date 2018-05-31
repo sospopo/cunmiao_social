@@ -1,9 +1,12 @@
 <template>
   <div class="box">
     <div class="page-head">
-      <div class="head-logo"><a href="/index">大师兄</a></div>
+      <div class="head-logo"><a href="/">大师兄</a></div>
       <div class="head-search">10秒钟注册账号，找到你的同学</div>
-      <div class="head-reg">
+      <div v-if="accountName" class="head-reg">
+        <a href="/">{{accountName}}</a>
+      </div>
+      <div v-else class="head-reg">
         已有账号，立即&nbsp;<a href="/login">登录</a>
       </div>
     </div>
@@ -15,11 +18,12 @@
 
 <script>
   import handleMessage from '../config/errHandle.js'
-  import {removeItem} from '../config/mUtils.js'
+  import {getItem, removeItem} from '../config/mUtils.js'
 //  import {account} from '../server'
   export default {
     data () {
       return {
+        accountName: getItem('accountName')
       }
     },
     mounted () {
