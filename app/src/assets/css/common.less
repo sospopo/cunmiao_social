@@ -3,18 +3,272 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: @body-bg-color;
-  font: 14px/1 Tahoma,Helvetica,Arial,'宋体',sans-serif;
+  font: 14px/1 Tahoma, Helvetica, Arial, '宋体', sans-serif;
 }
 
 h1, h2, h3 {
   font-weight: normal;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 a {
   text-decoration: none !important;
   cursor: pointer;
+}
+
+// head style
+.page-head {
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+  background-color: @nav-bg-color;
+  .head-logo {
+    margin-left: 70px;
+    float: left;
+    font-size: 30px;
+    a {
+      color: white;
+      font-family: "bodoni mt";
+    }
+  }
+  .head-search {
+    float: left;
+    color: @nav-active-color;
+    margin-left: 90px;
+  }
+  .head-reg {
+    float: right;
+    margin-right: 40px;
+    color: white;
+    a {
+      color: @nav-active-color;
+      font-family: "bodoni mt";
+    }
+  }
+}
+
+// content style
+.page-content {
+}
+
+.dvContent {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  background-color: #fff;
+  .clear-float
+}
+
+.content-title {
+  height: 40px;
+  line-height: 30px;
+  margin-left: 40px;
+  font-weight: bold;
+  .qsTitle {
+    float: left;
+    margin-left: 15px;
+  }
+  .back {
+    float: right;
+    color: #4D47A0;
+    font-size: 12px;
+    margin-right: 20px;
+  }
+}
+
+.content-tab {
+  line-height: 40px;
+  padding: 10px 0 0 30px;
+  border: 1px solid #efefef;
+  font-size: 13px;
+  .clear-float;
+  .tab-current {
+    background-color: white;
+    z-index: 3;
+    color: black;
+    font-weight: bold;
+    border-top: 1px solid #efefef;
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+  }
+  .tab-head {
+    float: left;
+    padding: 0 20px 0 20px;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+  }
+}
+
+.tabContent {
+  clear: both;
+  border: 1px solid #efefef;
+  border-top: none;
+  .dvtags {
+    height: 40px;
+    line-height: 65px;
+    margin-left: 50px;
+    font-size: 14px;
+    .current-tag {
+      font-weight: bold;
+    }
+    a {
+      margin: 0 15px 0 15px;
+    }
+  }
+  .dvques {
+    .clear-float;
+    padding: 20px;
+    border-bottom: 1px dashed #cdcdcd;
+    .quesCount {
+      width: 60px;
+      height: 60px;
+      border: 1px solid #cdcdcd;
+      text-align: center;
+      float: left;
+      .count {
+        height: 35px;
+        line-height: 35px;
+        background-color: #efefef;
+        font-weight: bold;
+        color: #f60;
+        font-size: 26px;
+      }
+      .ques {
+        line-height: 25px;
+        color: #cdcdcd;
+        font-size: 13px;
+      }
+    }
+    .quesContent {
+      float: left;
+      margin-left: 20px;
+      width: 630px;
+      .qContent {
+        margin-top: 10px;
+        float: left;
+        line-height: 20px;
+        font-size: 13px;
+      }
+      .tags {
+        float: left;
+        margin-top: 20px;
+        .tag {
+          padding: 6px 5px 6px 5px;
+          margin-right: 10px;
+          background-color: #efefef;
+          font-size: 13px;
+        }
+      }
+      .quesUser {
+        float: right;
+        margin-right: 40px;
+        .imguser {
+          width: 55px;
+          height: 55px;
+          float: left;
+        }
+        .userName {
+          float: left;
+          margin-left: 10px;
+          margin-top: 10px;
+          font-size: 15px;
+          color: #4D47A0;
+          font-weight: bold;
+        }
+        .liulan {
+          font-weight: normal;
+          margin-top: 10px;
+          color: #cdcdcd;
+        }
+      }
+    }
+  }
+}
+
+.line {
+  width: 1px;
+  height: 40px;
+  border: 1px dashed #cdcdcd;
+}
+
+.hidden {
+  display: none;
+}
+
+.bean {
+  margin-left: 5px;
+  width: 15px;
+  height: 15px;
+  line-height: 30px;
+}
+
+.spanques {
+  margin-left: 40px;
+  font-weight: bold;
+  color: #4D47A0;
+}
+
+.btnques {
+  background-color: #3A71D0;
+  padding: 10px 10px 10px 10px;
+  font-size: 13px;
+  color: white;
+  border: none;
+  transition: all 2s;
+}
+
+.btnques:hover {
+  background-color: #6FD8A1;
+}
+
+.dvorder {
+  width: 250px;
+  margin-top: 30px;
+  height: 620px;
+  border: 1px solid #efefef;
+}
+
+.orderTitle {
+  height: 40px;
+  line-height: 40px;
+  background-color: #efefef;
+  text-indent: 30px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.users {
+  height: 60px;
+  margin-top: 20px;
+}
+
+.userface {
+  float: left;
+  margin-left: 30px;
+  width: 57px;
+  height: 57px;
+}
+
+.dvuser {
+  float: left;
+  margin-left: 10px;
+}
+
+.userTitle {
+  color: #4D47A0;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.userdeital {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #cdcdcd;
 }
