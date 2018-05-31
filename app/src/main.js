@@ -3,7 +3,22 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import jQuery from 'jquery'
+import '../src/lib/js/jQuery.md5'
+import {baseUrl} from './config/env.js'
 
+import 'jquery/dist/jquery.min.js'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
+import 'font-awesome/css/font-awesome.min.css'
+import '!style-loader!css-loader!less-loader!./assets/css/common.less'
+import 'element-ui/lib/theme-chalk/index.css'
+import ElementUI from 'element-ui'
+
+Vue.use(ElementUI);
+window.$ = jQuery;
+window.url = baseUrl;
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
@@ -13,3 +28,16 @@ new Vue({
   components: { App },
   template: '<App/>'
 });
+
+// router.beforeEach(({meta, path}, from, next) => {
+//   const { auth = true } = meta;
+//   const isLogin = Boolean(sessionStorage.getItem('accountId'));
+//   // const isLogin = true;
+//   if (auth && !isLogin && (path !== '/login')) {
+//     return next({ path: '/login' })
+//   }
+//   if (auth && isLogin && (path === '/')) {
+//     return next({ path: '/device' })
+//   }
+//   next()
+// });
